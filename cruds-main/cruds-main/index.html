@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الكتب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>إدارة الكتب</h1>
+    </header>
+
+    <main>
+        <!-- خانة البحث -->
+        
+            <h2>بحث عن كتاب</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن الكتاب..." onkeyup="searchBooks()">
+                <button onclick="clearSearch()">مسح البحث</button>
+            </div>
+        
+
+        <!-- Form لإضافة أو تعديل كتاب -->
+        
+            <form id="bookForm" onsubmit="return false;">
+                <label for="bookName">اسم الكتاب:</label>
+                <input type="text" id="bookName" placeholder="أدخل اسم الكتاب" required>
+        
+                <label for="author">اسم المؤلف:</label>
+                <input type="text" id="author" placeholder="أدخل اسم المؤلف" required>
+        
+                <label for="year">سنة النشر:</label>
+                <input type="number" id="year" placeholder="أدخل سنة النشر" required>
+        
+                <label for="quantity">الكمية:</label>
+                <input type="number" id="quantity" placeholder="أدخل الكمية" required>
+        
+                <label for="genre">نوع الكتاب:</label>
+                <select id="genre" required>
+                    <option value="" disabled selected>اختر نوع الكتاب</option>
+                    <option value="ديني">ديني</option>
+                    <option value="تنمية ذاتية">تنمية ذاتية</option>
+                    <option value="اداب">اداب</option>
+                    <option value="تاريخ">تاريخ</option>
+                    <option value="فلك">فلك</option>
+                    <option value="علوم">علوم</option>
+                    <option value="روايات">روايات</option>
+                    <option value="رعب">رعب</option>
+                </select>
+                <div class="price">
+                    <input onkeyup="gettotal()" type="number" id="السعر" placeholder="السعر">
+                    <input onkeyup="gettotal()" type="number" id="الضرائب" placeholder="الضرائب">
+                    <input onkeyup="gettotal()" type="number" id="اعلانات" placeholder="اعلانات">
+                    <input onkeyup="gettotal()" type="number" id="خصم" placeholder="خصم">
+                    <small id="total">100000</small>
+                </div>
+        
+                <button type="submit" onclick="addOrUpdateBook()">إضافة الكتاب</button>
+            </form>
+        
+        
+
+        <!-- جدول لعرض الكتب -->
+        <section>
+            <h2>قائمة الكتب</h2>
+            <table id="booksTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>اسم الكتاب</th>
+                        <th>اسم المؤلف</th>
+                        <th>سنة النشر</th>
+                        <th>الكمية</th>
+                        <th>نوع الكتاب</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- يتم ملء الصفوف ديناميكيًا بواسطة JavaScript -->
+                </tbody>
+            </table>
+            
+        </section>
+    </main>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
+

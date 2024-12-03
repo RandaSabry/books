@@ -1,0 +1,187 @@
+/* استيراد الخط من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
+
+/* Reset أساسي */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام الخط الجديد */
+    background-color: #f0f0f0; /* خلفية فاتحة مريحة */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #4b89c3; /* لون أزرق هادي */
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #4b89c3; /* نفس اللون الأزرق الهادئ */
+    text-align: right; /* العنوان على اليمين */
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    direction: rtl; /* جعل النص يظهر من اليمين لليسار */
+}
+
+form label {
+    align-self: center;
+    font-weight: bold;
+    color: #4b89c3; /* نفس اللون الأزرق الهادئ */
+    text-align: right; /* جعل النصوص بالعربية على اليمين */
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    background-color: #fafafa; /* خلفية خفيفة فاتحة */
+}
+
+form button {
+    grid-column: 1 / span 2;
+    padding: 12px;
+    background-color: #75a8d1; /* أزرق فاتح */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #4a8db1; /* درجة داكنة للأزرق */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    text-align: right; /* جعل النصوص في الجدول بالعربية على اليمين */
+    padding: 12px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+table th {
+    background-color: #e8f0f8; /* خلفية فاتحة لأعمدة الجدول */
+    color: #4b89c3;
+}
+
+table tr:hover {
+    background-color: #f9f9f9; /* تأثير مرور الفأرة */
+}
+
+table button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+table button.edit {
+    background-color: #6fa3d1; /* أزرق هادئ */
+    color: white;
+    margin-right: 5px;
+}
+
+table button.delete {
+    background-color: #e46c6c; /* أحمر مائل للوردي */
+    color: white;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين مربع البحث والزر */
+}
+
+.search-container input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    font-size: 1rem;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #75a8d1; /* لون الزر */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-container button:hover {
+    background-color: #4a8db1; 
+}
+
+#genre {
+    background-color: #f0f8ff; 
+    padding: 10px 15px;
+    background-color: #f3f4f6; 
+    color: rgb(36, 35, 35);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #genre option {
+    color: #333; 
+  }
+  
+  #genre option:hover {
+    background-color: #e6f0ff; /* لون الخلفية عند التمرير */
+    color: #000; /* لون النص عند التمرير */
+  }
+  input{
+    width: 100%;
+    height: 20%;
+    padding: 4px;
+  }
+  .price input {
+   
+  width: 50%;
+   
+
+  }
+  #total{
+    background: #4a8db1;
+    padding: 5px 2px;
+    border-radius: 4px;
+
+  }
+ #total::before{
+    content: 'المجموع: ';
+ }
